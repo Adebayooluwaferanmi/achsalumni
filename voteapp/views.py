@@ -11,7 +11,7 @@ def index(request):
     return render(request, "index.html", context)
 
 def summary(request):
-    return render(request, "Total_result.html")
+    return render(request, "Summary.html")
 
 @login_required(login_url="signin")
 def detail(request, slug):

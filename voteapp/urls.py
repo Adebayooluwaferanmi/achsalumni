@@ -10,7 +10,7 @@ urlpatterns = [
      path("signin", views.signin, name= "signin"),
      path("signup", views.signup, name="signup"),
      path("logout", views.signout, name="logout"),
-     path("Total_result", views.summary, name="summary")
+     path("summary", views.summary, name="summary")
      
      
 ]
