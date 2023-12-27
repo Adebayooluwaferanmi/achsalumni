@@ -69,32 +69,6 @@
         
       {% endfor %}
         
-{% extends 'base.html' %}
-
-{% block content %}
-  {% for category in categories %}
-    <div class="category-container">
-      <h2>{{ category.title }}</h2>
-      <p>{{ category.description }}</p>
-
-      <div class="items-container">
-        {% for item in category.items.all %}
-          <div class="item">
-            <h3>{{ item.title }}</h3>
-            <p>Total Votes: {{ item.total_vote }}</p>
-            <p>Percentage of Votes: {{ item.percentage_vote }}%</p>
-
-            <div class="progress">
-              <div class="progress-bar" role="progressbar" style="width: {{ item.percentage_vote }}%;" aria-valuenow="{{ item.percentage_vote }}" aria-valuemin="0" aria-valuemax="100"></div>
-            </div>
-
-            <p>Voters: {{ item.voters.count }}</p>
-          </div>
-        {% endfor %}
-      </div>
-    </div>
-  {% endfor %}
-
 
         
 {% endblock %}
